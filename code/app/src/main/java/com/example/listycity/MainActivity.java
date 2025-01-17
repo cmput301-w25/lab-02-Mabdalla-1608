@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 if (selectedIndex != -1) { // Ensure a city is selected
                     dataList.remove(selectedIndex); // Remove the selected city
                     cityAdapter.notifyDataSetChanged(); // Refresh the adapter
+                    cityList.getChildAt(selectedIndex).setBackgroundColor(Color.TRANSPARENT); //remove highlight from the line
                     selectedIndex = -1; // Reset the selected index
                 }
             }
